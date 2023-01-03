@@ -15,3 +15,14 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'index']);
 
+Route::prefix('admin')->group(function(){
+
+    Route::get('users', function(){
+        return "admin users";
+    });
+
+    Route::get('posts', function(){
+        return "admin posts";
+    });
+
+});
